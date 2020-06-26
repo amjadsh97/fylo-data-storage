@@ -1,14 +1,186 @@
+body {
+  font-family: Raleway;
+}
+
 .attribution {
-    font-size: 11px;
-    text-align: center;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: #1d2c67;
+  text-decoration: none;
+  color: #777;
 }
 
-.container {;
-    background: url("images/bg-desktop.svg") no-repeat;
-    background-size: 300px;
-    display: flex;
+.section {
+  background-color: #0c122c;
 }
+
+.wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.bg-color {
+  background-color: #0c122c;
+}
+
+.sub-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-items: unset;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-end;
+  transform: translate(0, 50%);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.side-1 {
+  padding: 40px;
+  background-color: #1d2c67;
+  border-radius: 10px 90px 10px 10px;
+  margin: 20px;
+}
+
+.logo svg {
+  margin-bottom: 14px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list--item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.list--item svg:last-child {
+  transform: translate(0%, 15%);
+}
+
+.list--link {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #0c122c;
+  padding: 10px;
+}
+
+.side-2 {
+  border-radius: 10px;
+  flex: 1;
+  position: relative;
+  padding-top: 70px;
+}
+
+.side--title {
+  color: #b8c5fcba;
+  font-weight: 400;
+}
+
+.side--title__size {
+  color: #dddbff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+
+.range {
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 15px;
+  background-color: #0c122c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-items: unset;
+  padding-right: 2px;
+}
+
+.range--active {
+  background: linear-gradient(#ffa399, #ff4d97);
+  height: 12px;
+  border-radius: 10px;
+  max-width: 70%;
+  margin-bottom: auto;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2px;
+}
+
+.range--circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.range-numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.img {
+  display: inline-block;
+  max-height: 300px;
+}
+
+.box {
+  background-color: #ffffff;
+  padding: 14px 18px;
+  position: relative;
+  max-width: 100px;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
+.box--title {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.box--unit {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777777;
+}
+
+.box::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-top: 20px solid #fff;
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+}
+
+/*# sourceMappingURL=style.css.map */
