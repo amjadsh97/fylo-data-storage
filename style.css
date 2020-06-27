@@ -217,6 +217,10 @@ body {
   .box::after {
     display: none;
   }
+
+  .box--title {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
