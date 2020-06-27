@@ -1,0 +1,226 @@
+$pale-Blue: hsl(243, 100%, 93%);
+$grayish-Blue: hsl(229, 7%, 55%);
+$dark-Blue: hsl(228, 56%, 26%);
+$very-dark-Blue: hsl(229, 57%, 11%);
+$gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+
+body {
+    font-family: Raleway;
+}
+
+@mixin flexItemsCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attribution {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: $dark-Blue;
+    text-decoration: none;
+    color: #777;
+}
+
+.section {
+    background-color: $very-dark-Blue;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.bg-color {
+    background-color: $very-dark-Blue;
+    //height: 300px;
+}
+
+.sub-wrapper {
+    @include flexItemsCenter(column);
+    align-items: unset;
+}
+
+.container {
+    //background: url("images/bg-desktop.svg") no-repeat;
+    //background-size: cover;
+    //min-height: 300px;
+    @include flexItemsCenter(row);
+    align-items: flex-end;
+    transform: translate(0, 50%);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.side-1 {
+    padding: 40px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 90px 10px 10px;
+    margin: 20px;
+    flex: 0.5;
+}
+
+.logo svg {
+    margin-bottom: 14px;
+}
+
+.list {
+    @include flexItemsCenter(row);
+    justify-content: flex-start;
+}
+
+.list--item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.list--item svg:last-child {
+    transform: translate(0%, 15%);
+}
+
+.list--link {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: $very-dark-Blue;
+    padding: 10px;
+}
+
+.side-2 {
+    border-radius: 10px;
+    flex: 1;
+    position: relative;
+    padding-top: 70px;
+}
+
+.side--title {
+    color: #b8c5fcba;
+    font-weight: 400;
+}
+
+.side--title__size {
+    color: $pale-Blue;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    //font-weight: 700;
+}
+
+.range {
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 15px;
+    background-color: $very-dark-Blue;
+    @include flexItemsCenter(column);
+    //justify-content: center;
+    align-items: unset;
+    //padding-left: 2px;
+    padding-right: 2px;
+}
+
+.range--active {
+    background: linear-gradient($gradient);
+    height: 12px;
+    border-radius: 10px;
+    max-width: 70%;
+    margin-bottom: auto;
+    margin-top: auto;
+    @include flexItemsCenter(row);
+    justify-content: flex-end;
+    padding-right: 2px;
+}
+
+.range--circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+
+}
+
+.range-numbers {
+    @include flexItemsCenter(row);
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.img {
+    display: inline-block;
+    max-height: 300px;
+}
+
+.box {
+    position: relative;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 14px 18px;
+    max-width: 100px;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+
+}
+
+.box--title {
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.box--unit {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #777777;
+}
+
+.box::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-top: 20px solid #fff;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+}
+
+
+@media (max-width: 750px) {
+    body {
+        background: url("images/bg-mobile.svg") no-repeat;
+        background-size: cover;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .section {
+        background-color: transparent;
+    }
+
+    .container {
+        transform: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .box {
+        position: static;
+        border-bottom-right-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .box::after {
+        display: none;
+
+    }
+}

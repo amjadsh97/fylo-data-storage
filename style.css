@@ -52,6 +52,7 @@ body {
   background-color: #1d2c67;
   border-radius: 10px 90px 10px 10px;
   margin: 20px;
+  flex: 0.5;
 }
 
 .logo svg {
@@ -63,6 +64,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .list--item:not(:last-child) {
@@ -148,9 +150,10 @@ body {
 }
 
 .box {
+  position: relative;
+  text-align: center;
   background-color: #ffffff;
   padding: 14px 18px;
-  position: relative;
   max-width: 100px;
   border-radius: 10px;
   border-bottom-right-radius: 0;
@@ -161,7 +164,7 @@ body {
 
 .box--title {
   color: #000000;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -181,6 +184,39 @@ body {
   position: absolute;
   right: 0;
   bottom: -20px;
+}
+
+@media (max-width: 750px) {
+  body {
+    background: url("images/bg-mobile.svg") no-repeat;
+    background-size: cover;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .section {
+    background-color: transparent;
+  }
+
+  .container {
+    transform: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .box {
+    position: static;
+    border-bottom-right-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  .box::after {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
